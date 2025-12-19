@@ -59,24 +59,25 @@ void pauseScreen() {
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
-/* ===== Main ===== */
+
 int main(void) {
     mainMenu();
     return EXIT_SUCCESS;
 }
-
 
 void mainMenu(void) {
     int choice;
     int running = 1;
 
     while (running) {
-        printf("\n===== Welcome to ABL =====\n");
-        printf("1. ADMIN PANEL\n");
+        printf("\n=====================================\n");
+        printf("\tDIGITAL BANKING SYSTEM\n");
+        printf("\n=====================================\n");
+        printf("\n1. ADMIN PANEL\n");
         printf("2. USER PANEL\n");
         printf("3. ATM\n");
         printf("4. EXIT\n");
-        printf("Enter choice: ");
+        printf("\nEnter choice: ");
 
         if (scanf("%d", &choice) != 1) {
             printf("Invalid input! Please enter a number.\n");
@@ -124,6 +125,7 @@ void mainMenu(void) {
         }
     }
 }
+
 
 
 /* ===== Admin Panel ===== */
@@ -227,8 +229,10 @@ void createAdmin() {
 
     int newAdminID = lastID + 1;
 
-    /* ===== INPUT ===== */
-    printf("\n=== CREATE ADMIN ===\n");
+    
+    printf("\n--------------------------------\n");
+    printf("\tCREATE ADMIN\n");
+    printf("\n--------------------------------\n");
 
     printf("Enter Admin Name: ");
     scanf("%29s", username);
@@ -241,7 +245,7 @@ void createAdmin() {
         return;
     }
 
-    /* ===== SAVE TO FILE ===== */
+    
     time_t t = time(NULL);
     char dt[30];
     strcpy(dt, ctime(&t));
@@ -258,7 +262,7 @@ void createAdmin() {
 
     fclose(fp);
 
-    /* ===== TERMINAL OUTPUT ===== */
+    
     printf("\nAdmin created successfully!\n");
     printf("Admin Name : %s\n", username);
     printf("Admin ID   : %d\n", newAdminID);
@@ -269,7 +273,9 @@ void adminPanel() {
     int choice;
 
     while (1) {
-        printf("\n===== Admin Panel =====\n");
+        printf("\n--------------------------------\n");
+        printf("\tADMIN PANEL");
+        printf("\n--------------------------------\n");
         printf("1. CREATE USER ACCOUNT\n");
         printf("2. CHANGE USER PIN\n");
         printf("3. DELETE USER\n");
@@ -337,9 +343,9 @@ void createUser() {
     printf("4-digit PIN: ");
     scanf("%d", &u.pin);
 
-    u.balance = 0.0; // default
+    u.balance = 0.0;
     u.atmCardNo = 10000000 + u.accountNo;
-    u.cardStatus = 1; // ACTIVE
+    u.cardStatus = 1;
 
     // ===== Save to users.txt =====
     fprintf(fp,"account : %d\nname : %s\npin : %d\nbalance : %.2f\n------------------\n",
@@ -356,7 +362,9 @@ void createUser() {
     printf("\nUser account created successfully!\n");
 
     // ===== Show ATM card on screen =====
-    printf("\n==== ATMCARD ISSUED ====\n");
+    printf("\n--------------------------------\n");
+    printf("\tATMCARD ISSED");
+    printf("\n--------------------------------\n");
     printf("AccountNo: %d\n", u.accountNo);
     printf("UserName: %s\n", u.name);
     printf("AtmCard No: %ld\n", u.atmCardNo);
@@ -608,7 +616,9 @@ invalid:
 void atmMenu(struct User *u) {
     int choice;
     while(1){
-        printf("\n===== ATM =====\n");
+        printf("\n--------------------------------\n");
+        printf("\tATM");
+        printf("\n--------------------------------\n");
         printf("1. DEPOSIT\n2. WITHDRAW\n3. BALANCE INQUIRY\n4. MONEY TRANSFER\n5. LOGOUT\n");
         printf("Choice: ");
 
@@ -971,7 +981,11 @@ void userLogin(){
 void userPanelMenu(struct User u){
     int choice;
     while(1){
-        printf("\n===== USER PANEL =====\n1. Display ATM Card Info\n2. Show Transactions\n3. Back to Main Menu\nEnter choice: ");
+        printf("\n--------------------------------\n");
+        printf("\tUSER PANEL");
+        printf("\n--------------------------------\n");
+        printf("1. Display ATM Card Info\n2. Show Transactions\n3. Back to Main Menu\nEnter choice: ");
+        
         if(scanf("%d",&choice)!=1){ while(getchar()!='\n'); continue; }
 
         switch(choice){
@@ -983,7 +997,9 @@ void userPanelMenu(struct User u){
     }
 }
 void showATMCardInfo(struct User u){
-    printf("\n========== ATM CARD INFORMATION ==========\n");
+    printf("\n--------------------------------\n");
+    printf("\tATM CARD INFO");
+    printf("\n--------------------------------\n");
     printf("AccountNo: %d\n", u.accountNo);
     printf("UserName: %s\n", u.name);
     printf("Pin: %d\n", u.pin);
@@ -1003,7 +1019,9 @@ void showTransactions(struct User u){
 
     struct Transaction t;
     char line[200];
-    printf("\n===== Your Transactions =====\n");
+    printf("\n--------------------------------\n");
+    printf("\tYour Transactions");
+    printf("\n--------------------------------\n");
     
     while(fgets(line,sizeof(line),fp)){
         if(sscanf(line,"AccountNo        : %d",&t.accountNo)==1){
@@ -1023,4 +1041,4 @@ void showTransactions(struct User u){
         }
     }
     fclose(fp);
-}
+}   

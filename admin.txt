@@ -1,0 +1,10 @@
+AdminName : abdul
+AdminID   : 1030001
+Code      : 1234
+DateTime  : Thu Dec 18 12:09:12 2025
+----------------------
+AdminName : abdulll
+AdminID   : 1030002
+Code      : 1234
+DateTime  : Thu Dec 18 12:42:53 2025
+----------------------
