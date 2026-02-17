@@ -1,0 +1,24 @@
+==============================
+AccountNo   : 1000008523
+Name        : hamza
+MPIN        : 6543
+CNIC        : 1234587656125
+Balance     : 0.00
+IBAN        : PK83 DGTL 1000 0085 8523 5569
+AtmCard No  : 4000000001155
+Status      : ACTIVE
+Date & Time : Tue Feb 17 19:24:37 2026
+==============================
+
+==============================
+AccountNo   : 1000022582
+Name        : abdulmuqeet12
+MPIN        : 4321
+CNIC        : 8761232467891
+Balance     : 0.00
+IBAN        : PK80 DGTL 1000 0225 2582 7746
+AtmCard No  : 4000000020411
+Status      : ACTIVE
+Date & Time : Tue Feb 17 19:29:22 2026
+==============================
+

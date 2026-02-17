@@ -1,0 +1,18 @@
+==============================
+AccountNo   : 1000008523
+UserName    : hamza
+ATM PIN     : 1234
+AtmCard No  : 4000000001155
+CardStatus  : ACTIVE
+Date & Time : Tue Feb 17 19:24:37 2026
+==============================
+
+==============================
+AccountNo   : 1000022582
+UserName    : abdulmuqeet12
+ATM PIN     : 1234
+AtmCard No  : 4000000020411
+CardStatus  : ACTIVE
+Date & Time : Tue Feb 17 19:29:22 2026
+==============================
+

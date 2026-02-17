@@ -1,0 +1,18 @@
+============================
+AccountNo   : 1000008523
+Date & Time : Tue Feb 17 19:24:37 2026
+Message     : Welcome hamza! Account No: 1000008523 | ATM Card No: 4000000001155 | IBAN: PK83 DGTL 1000 0085 8523 5569
+============================
+
+============================
+AccountNo   : 18301753302908514
+Date & Time : Tue Feb 17 19:28:20 2026
+Message     : lease pay the bank fee otherwise your account will be blocked
+============================
+
+============================
+AccountNo   : 1000022582
+Date & Time : Tue Feb 17 19:29:22 2026
+Message     : Welcome abdulmuqeet12! Account No: 1000022582 | ATM Card No: 4000000020411 | IBAN: PK80 DGTL 1000 0225 2582 7746
+============================
+
